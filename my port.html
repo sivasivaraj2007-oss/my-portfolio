@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Layout Portfolio</title>
+    <style>
+        /* Modern Base Configuration */
+        :root {
+            --bg-color: #0f172a;      /* Slate Dark Background */
+            --card-bg: #1e293b;       /* Darker Blue-Grey Card */
+            --primary-accent: #38bdf8; /* Electric Cyan */
+            --secondary-neon: #818cf8; /* Soft Violet */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* Continuous One-By-One Layout Wrapper */
+        .portfolio-wrapper {
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem; /* Section-uku naduvil ulla equal spacing vertical gap */
+        }
+
+        /* Branding Logo Block at the Top */
+        .brand-header {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .brand-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, var(--primary-accent), var(--secondary-neon));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Individual Content Blocks */
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Project Sub-items inside Section */
+        .project-item {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .project-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        /* Action Anchor Button */
+        .btn-action {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: transparent;
+            color: var(--primary-accent);
+            border: 2px solid var(--primary-accent);
+            padding: 0.6rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-action:hover {
+            background: var(--primary-accent);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
+        /* Compact Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-wrapper">
+
+        <!-- Top Header Logo Block -->
+        <div class="brand-header">
+            <div class="brand-logo">MY.PORTFOLIO</div>
+        </div>
+
+        <!-- 1. ABOUT ME BLOCK -->
+        <section id="about">
+            <h2>// 01 . About Me</h2>
+            <p>
+                Hi, I am <strong>[Your Name Here]</strong>. I specialize in crafting basic, clean layout templates. 
+                I write modern semantic structural HTML blocks and bundle them smoothly into responsive vertical styles.
+            </p>
+        </section>
+
+        <!-- 2. PROJECTS BLOCK -->
+        <section id="projects">
+            <h2>// 02 . My Projects</h2>
+            
+            <div class="project-item" style="border: none; margin-top: 0; padding-top: 0;">
+                <h3>Nexus Web App Interface</h3>
+                <p>A pure architectural user dashboard interface optimized cleanly for responsive system rendering views.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Crypto Tracker Console</h3>
+                <p>Minimalist live metric logging console template parsing standard asset tracking metrics cleanly.</p>
+            </div>
+        </section>
+
+        <!-- 3. CONTACT BLOCK -->
+        <section id="contact">
+            <h2>// 03 . Contact Me</h2>
+            <p>Looking to collaborate on something interesting or have specific web interface layouts to design? Drop a direct message token below.</p>
+            <p style="margin-top: 1rem; color: var(--text-main); font-weight: 600;">
+                SYSTEM_EMAIL: sivasivaraj2007@gmail.com
+            </p>
+            <a href="mailto:sivasivaraj2007@gmail.com" class="btn-action">Send Mail Signal</a>
+        </section>
+
+        <!-- Bottom Footer -->
+        <footer>
+            <p>&copy; 2026 Portfolio Matrix System. Built with clean structure.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
